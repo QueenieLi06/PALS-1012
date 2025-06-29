@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PALS1012</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Microsoft YaHei", sans-serif;
+            display: flex;
+            flex-direction: column;
+            background-color: #ffe4e1;
+        }
+
+        .wrapper {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+            padding: 189px 20px;
+            text-align: center;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        nav {
+                background-color: #003366;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+                z-index: 10;
+                position: relative;
+                border-radius: 0 0 12px 12px;
+        }
+
+        nav a {
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            cursor: pointer;
+            flex: 1 1 auto;
+            min-width: 120px;
+        }
+
+        nav a:hover {
+            background-color: #0059b3;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+            scroll-margin-top: 60px;
+        }
+
+        .content {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+
+        @media screen and (max-width: 600px) {
+            nav {
+                flex-direction: column;
+            }
+
+            nav a {
+                flex: none;
+                width: 100%;
+                border-top: 1px solid #004080;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+    <header>
+        <h1>PALS1012 ASAS KELESTARIAN TEKNOLOGI HIJAU</h1>
+        <p>QUEENIE LI ROU YING | IPG KAMPUS PENDIDIKAN TEKNIK</p>
+    </header>
+
+    <nav>
+        <a onclick="showContent('1')">SDG 13</a>
+        <a onclick="showContent('2')">ISU PERUBAHAN IKLIM</a>
+        <a onclick="showContent('3')">PEMILIHAN PRODUK</a>
+        <a onclick="showContent('4')">ANALISIS PRODUK</a>
+        <a onclick="showContent('5')">IMPAK PRODUK</a>
+        <a onclick="showContent('6')">CABARAN PELAKSANAAN PRODUK</a>
+        <a onclick="showContent('7')">CADANGAN STRATEGI PENYELESAIAN CABARAN</a>
+    </nav>
+
+    <main id="mainContent">
+        <div id="1" class="content">
+            <img src="sdg13.jpg" alt="SDG 13 Banner" style="width: 100%; max-width: 250px; height: auto; display: block; margin: 0 auto 10px;">
+            <h2>SDG 13</h2>
+            <ul style="padding-left: 4em;">
+                <li>Dalam konteks pembangunan mampan sejagat, Pertubuhan Bangsa-Bangsa Bersatu (PBB) telah merangka Matlamat Pembangunan Mampan 13: Tindakan Iklim (SDG13).</li>
+                <li>Berfungsi sebagai panduan negara-negara anggota bagi bertujuan untuk mengambil tindakan bagi mengurangkan kesan perubahan iklim.</li>
+            </ul>
+            
+        </div>
+
+        <div id="2" class="content">
+            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 10px;">
+                <img src="1.jpg" alt="SDG 13 Banner 1" style="width: 100%; max-width: 250px; height: auto;">
+                <img src="2.jpg" alt="SDG 13 Banner 2" style="width: 100%; max-width: 250px; height: auto;">
+            </div>
+            <h2>ISU ALAM SEKITAR YANG DIPILIH</h2>
+            <p>Perubahan iklim dikenali sebagai perubahan dalam corak cuaca sama ada di peringkat global, serantau atau nasional selama beberapa dekad atau lebih yang disebabkan oleh aktiviti manusia atau faktor semula jadi (Jabatan Meteorologi Malaysia, n.d.).</p>
+            <p>Antara aktiviti manusia yang menyumbang kepada perubahan iklim:</p>
+            <ul style="padding-left: 4em;">
+                <li>Pembakaran bahan api fosil yang melepaskan gas rumah kaca (karbon dioksida)</li>
+                <li>Penebangan hutan</li>
+                <li>Pengeluaran metana (CH4) melalui pertanian dan penternakan</li>
+                <li>Penggunaan bahan kimia industri</li>
+            </ul>
+            <figure style="width: 100%; max-width: 350px; margin: 0 auto; text-align: center;">
+                <img src="6.jpg" alt="SDG 13 Banner 2" style="width: 100%; height: auto;">
+                <figcaption style="font-size: 14px; color: #555; margin-top: 5px;">Rajah 1: Peningkatan Suhu Purata Global (sekitar tahun 1850-2023)</figcaption>
+            </figure>
+            <ul style="padding-left: 4em;">
+                <li>Suhu purata global telah meningkat sebanyak 1.2°C sejak zaman pra-industri</li>
+                <li>Suhu purata itu akan terus meningkat jika tiada langkah efektif diambil untuk mengurangkannya</li>
+            </ul>
+            <p>Antara kesan ketara akibat perubahan iklim:</p>
+            <ul style="padding-left: 4em;">
+                <li>Kejadian cuaca ekstrem (banjir kilat, gelombang haba, kebakaran hutan, pencairan glasier kenaikan paras laut)</li>
+            </ul>
+            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 10px;">
+                <img src="3.jpg" alt="SDG 13 Banner 1" style="width: 100%; max-width: 250px; height: auto;">
+                <img src="4.jpg" alt="SDG 13 Banner 2" style="width: 100%; max-width: 250px; height: auto;">
+                <img src="5.jpg" alt="SDG 13 Banner 2" style="width: 100%; max-width: 250px; height: auto;">
+            </div>
+            <figure style="width: 100%; max-width: 350px; margin: 0 auto; text-align: center;">
+                <img src="7.jpg" alt="SDG 13 Banner 2" style="width: 100%; height: auto;">
+                <figcaption style="font-size: 14px; color: #555; margin-top: 5px;">Perbandingan Sektor Penyumbang kepada Perubahan Iklim</figcaption>
+            </figure>
+            <ul style="padding-left: 4em;">
+                <li>Berdasarkan carta pai di atas, sektor pengangkutan merupakan penyumbang kedua terbesar kepada perubahan iklim dengan anggaran 15% daripada jumlah keseluruhan</li>
+                <li>Punca: penggunaan kenderaan bermotor yang berasaskan bahan api fosil (petrol, diesel) yang akan menghasilkan karbon dioksida (CO2), nitrogen dioksida (NO2) dan zarah halus ke atmosfera</li>
+            </ul>
+        </div>
+
+        <div id="3" class="content">
+            <h2>PEMILIHAN PRODUK TEKNOLOGI HIJAU</h2>
+            <figure style="width: 100%; max-width: 350px; margin: 0 auto; text-align: center;">
+                <img src="8.jpg" alt="SDG 13 Banner 2" style="width: 100%; height: auto;">
+                <figcaption style="font-size: 14px; color: #555; margin-top: 5px;">Rajah 3: Contoh Kenderaan Elektrik- Tesla Model 3</figcaption>
+            </figure>
+            <p>Kenderaan elektrik dikenali sebagai kenderaan yang digerakkan oleh motor elektrik dan berbeza daripada kenderaan konvensional yang menggunakan enjin pembakaran dalaman serta bergantung sepenuhnya kepada bahan api fosil (petrol dan diesel).</p>
+            <p>Faktor pemilihan kenderaan elektrik sebagai produk teknologi hijau:</p>
+            <ol>
+                <li>Tidak menghasilkan pelepasan gas karbon dioksida ke atmosfera</li>
+            </ol>
+            <ul style="padding-left: 4em;">
+                <li>Kenderaan elektrik mampu mengurangkan pelepasan karbon melebihi 60% berbanding kenderaan konvensional (International Energy Agency, 2023)</li>
+            </ul>
+            <ol start="2">
+                <li>Penggunaan kenderaan elektrik dapat mengurangkan pergantungan terhadap pembakaran api fosil serta menurunkan kadar pencemaran udara</li>
+            </ol>
+            <ul style="padding-left: 4em;">
+                <li>Kenderaan jalan raya dikenal pasti sebagai penyumbang utama dengan lebih dua pertiga daripada jumlah pelepasan tersebut</li>
+            </ul>
+        </div>
+
+        <div id="4" class="content">
+            <h2>ANALISIS TERHADAP PRODUK TEKNOLOGI HIJAU YANG DIPILIH</h2>
+            <figure style="width: 100%; max-width: 350px; margin: 0 auto; text-align: center;">
+                <img src="9.jpg" alt="SDG 13 Banner 2" style="width: 100%; height: auto;">
+                <figcaption style="font-size: 14px; color: #555; margin-top: 5px;">Rajah 4: Pelepasan Karbon Dioksida Sepanjang Hayat (tan)</figcaption>
+            </figure>
+            <p>Kenderaan elektrik menghasilkan sekitar 38 tan karbon dioksida sepanjang tempoh hayat penggunaannya, berbanding kenderaan konvensional yang menghasilkan kira-kira 76 tan karbon dioksida. Ini menunjukkan bahawa penggunaan kenderaan elektrik dapat mengurangkan pelepasan karbon dioksida sebanyak hampir 50%.</p>
+            <figure style="width: 100%; max-width: 350px; margin: 0 auto; text-align: center;">
+                <img src="10.jpg" alt="SDG 13 Banner 2" style="width: 100%; height: auto;">
+                <figcaption style="font-size: 14px; color: #555; margin-top: 5px;">Rajah 5: Trend Penggunaan Kenderaan Elektrik (2020-2023)</figcaption>
+            </figure>
+            <ul style="padding-left: 4em;">
+                <li>Trend di atas menunjukkan peningkatan yang ketara dari tahun 2020 hingga 2023</li>
+                <li>Sebanyak 14.2 juta unit kenderaan elektrik telah terjual di seluruh dunia pada tahun 2023 (EV-Volumes, 2024)</li>
+                <li>Sebanyak 21,789 unit kenderaan elektrik bateri (BEV) telah dijual di Malaysia pada tahun 2024 berbanding hanya 13,301 unit pada tahun sebelumnya (Jabatan Pengangkutan Jalan, 2025)</li>
+            </ul>
+            <p>Dengan ini dapat menunjukkan bahawa sokongan pasaran terhadap teknologi mesra alam dan menjadi petunjuk bahawa kenderaan elektrik akan menjadi elemen penting dalam peralihan kepada sistem pengangkutan yang lestari sejajar dengan komitmen negara terhadap SDG13.</p>
+        </div>
+        
+        <div id="5" class="content">
+            <h2>IMPAK PRODUK TEKNOLOGI HIJAU TERHADAP ISU PERUBAHAN IKLIM</h2>
+            <ol>
+                <li>Mengurangkan Pelepasan Gas Rumah Hijau</li>
+            </ol>
+            <ul style="padding-left: 4em;">
+                <li>Penggunaan kenderaan elektrik mampu mengurangkan hampir 50% pelepasan karbon dioksida ke atmosfera</li>
+            </ul>
+            <ol start="2">
+                <li>Peningkatan Kualiti Udara</li>
+            </ol>
+            <ul style="padding-left: 4em;">
+                <li>Kenderaan elektrik tidak menghasilkan pelepasan ekzos seperti nitrogen dioksida (NO2) dan zarah halus (PM2.5) yang sering mengakibatkan masalah kesihatan seperti asma dan penyakit kardiovaskular (PHaDmin, 2024)</li>
+            </ul>
+            <ol start="3">
+                <li>Pengurangan Kebergantungan Negara Terhadap Bahan Api Fosil</li>
+            </ol>
+            <ul style="padding-left: 4em;">
+                <li>Kenderaan elektrik digerakkan oleh motor elektrik yang menggunakan tenaga elektrik berbanding enjin pembakaran dalaman yang bergantung kepada minyak mentah</li>
+                <li>Peralihan kepada kenderaan elektrik berupaya mengurangkan pergantungan ini, khususnya apabila tenaga elektrik dijana daripada sumber boleh diperbaharui</li>
+                <li>Dengan ini, penggunaan kenderaan elektrik mampu mengurangkan kadar pencemaran alam sekitar, terutamanya pencemaran udara</li>
+            </ul>
+        </div>
+
+        <div id="6" class="content">
+            <h2>CABARAN PELAKSANAAN PENGGUNAAN PRODUK TEKNOLOGI HIJAU</h2>
+            <ol>
+                <li>Kos Pemilikan yang Tinggi</li>
+            </ol>
+            <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+                <thead>
+                    <tr style="background-color: #f2f2f2;">
+                        <th style="border: 1px solid #ccc; padding: 8px;">Kategori Isi Rumah</th>
+                        <th style="border: 1px solid #ccc; padding: 8px;">Purata Pendapatan Bulanan</th>
+                        <th style="border: 1px solid #ccc; padding: 8px;">Pendapatan Tahunan</th>
+                        <th style="border: 1px solid #ccc; padding: 8px;">Contoh Kenderaan Elektrik Mampu Milik</th>
+                        <th style="border: 1px solid #ccc; padding: 8px;">Harga Kenderaan Elektrik Mampu Milik</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="border: 1px solid #ccc; padding: 8px;">B40</td>
+                        <td style="border: 1px solid #ccc; padding: 8px;">RM 4,850</td>
+                        <td style="border: 1px solid #ccc; padding: 8px;">RM58,200</td>
+                        <td style="border: 1px solid #ccc; padding: 8px;">Neta V Standard</td>
+                        <td style="border: 1px solid #ccc; padding: 8px;">(RM100,000/RM58,200)×100%=172%</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #ccc; padding: 8px;">M40</td>
+                        <td style="border: 1px solid #ccc; padding: 8px;">RM6,000</td>
+                        <td style="border: 1px solid #ccc; padding: 8px;">RM72,000</td>
+                        <td style="border: 1px solid #ccc; padding: 8px;">BYD Dolphin Standard</td>
+                        <td style="border: 1px solid #ccc; padding: 8px;">(RM99,900/RM72,000)×100%=139%</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #ccc; padding: 8px;">M40 atas ke T20</td>
+                        <td style="border: 1px solid #ccc; padding: 8px;">RM10,000</td>
+                        <td style="border: 1px solid #ccc; padding: 8px;">RM120,000</td>
+                        <td style="border: 1px solid #ccc; padding: 8px;">Ora Good Cat</td>
+                        <td style="border: 1px solid #ccc; padding: 8px;">(RM114,800/RM120,000)×100%=95%</td>
+                    </tr>
+                </tbody>
+                <caption style="font-weight: bold; margin-bottom: 10px;">Jadual 1: Harga Kenderaan Elektrik Berbanding Dengan Pendapatan Isi Rumah Malaysia</caption>
+            </table>
+            <ul style="padding-left: 4em;">
+                <li>Dengan menunjukkan Rajah 6 di atas, golongan B40 perlu membelanjakan hampir 172% daripada pendapatan tahunannya untuk memiliki sebuah kenderaan elektrik pemilikan teknologi ini sangat membebankan tanpa bantuan kewangan</li>
+                <li>Golongan M40 bawah yang masih perlu membelanjakan lebih 130% daripada pendapatan tahunan mereka</li>
+                <li>Hanya golongan M40 atas hingga T20 yang mempunyai keupayaan kewangan yang lebih stabil untuk memiliki kenderaan elektrik tanpa tekanan kewangan</li>
+            </ul>
+            <ol start="2">
+                <li>Kekurangan Infrastruktur Pengecasan Kenderaan Elektrik</li>
+            </ol>
+            <ul style="padding-left: 4em;">
+                <li>Menurut statistik daripada Malaysia Productivity Corporation (2024), hanya 3,354 stesen pengecas awam tersedia sehingga Oktober 2024, iaitu 33.54% daripada sasaran 10,000 stesen menjelang tahun 2025</li>
+                <li>Di Malaysia, kebanyakannya stesen tertumpu di Selangor dan Kuala Lumpur, manakala negeri lain seperti Kedah, Kelantan dan Pahang hanya mempunyai kurang dari stesen</li>
+            </ul>
+            <ol start="3">
+                <li>Isu Pelupusan dan Kitar Semula Bateri</li>
+            </ol>
+            <ul style="padding-left: 4em;">
+                <li>Kenderaan elektrik menggunakan bateri berkapasiti tinggi yang mengandungi bahan seperti lithium-ion</li>
+                <li>Pelupusan bateri litium-ion yang tidak terkawal boleh menghasilkan sisa berbahaya yang mencemarkan alam sekitar dan berpotensi menyebabkan kebakaran</li>
+                <li>Kadar kitar semula bateri kenderaan elektrik di peringkat global masih rendah disebabkan oleh kos yang tinggi dan kurangnya sistem sokongan undang-undang yang kukuh di banyak negara membangun</li>
+            </ul>
+        </div>
+
+        <div id="7" class="content">
+            <h2>CADANGAN STRATEGI UNTUK MENYELESAIKAN CABARAN PELAKSANAAN KENDERAAN ELEKTRIK</h2>
+            <ol>   
+                <li>Penyediaan Insentif Kewangan</li>
+            </ol>
+            <ul style="padding-left: 4em;">
+                <li>Kos pemilikan yang tinggi telah menjadi cabaran utama dalam memperluaskan penggunaan kenderaan elektrik dalam golongan B40 dan M40 bawah</li>
+                <li>Kerajaan disarankan untuk menyediakan lebih banyak insentif kewangan seperti rebat tunai, pengecualian cukai jualan dan skim pembiayaan patuh syariah bagi kenderaan elektrik</li>
+                <li>Dengan memperluas insentif kepada model mampu milik berharga bawah RM100,000 dapat membuka peluang kepada lebih ramai rakyat untuk beralih kepada kenderaan elektrik</li>
+            </ul>
+            <ol start="2">
+                <li>Penghasilan Kenderaan Elektrik Tempatan Berkos Rendah</li>
+            </ol>
+            <ul style="padding-left: 4em;">
+                <li>Strategi ini dapat meningkatkan kadar pemilikan dalam kalangan rakyat, terutamanya B40 dan M40 bawah</li>
+                <li>Strategi ini juga menyumbang kepada mempromosikan barangan tempatan dan seterusnya mengukuhkan daya saing jenama tempatan di pasaran domestik dan antarabangsa</li>
+                <li>Langkah ini juga dapat mengurangkan kebergantungan kepada import dan meningkatkan peluang pekerjaan dalam sektor teknologi hijau</li>
+            </ul>
+            <ol start="3">
+                <li>Perkembangan Infrastruktur Pengecasan melalui Kerjasama Awam dan Swasta</li>
+            </ol>
+            <ul style="padding-left: 4em;">
+                <li>Syarikat seperti Tenaga Nasional Berhad, Sime Darby dan Gentari boleh bekerjasama membina stesen pengecas di lokasi strategik seperti lebuh raya, pusat beli-belah dan kawasan luar bandar</li>
+                <li>Kerjasama ini dapat memastikan pembangunan infrastruktur yang menyeluruh dan menggalakkan penggunaan kenderaan elektrik</li>
+            </ul>
+            <ol start="4">
+                <li>Penggubalan Dasar Kitar Semula Mandatori untuk Bateri Kenderaan Elektrik</li>
+            </ol>
+            <ul style="padding-left: 4em;">
+                <li>Kerajaan perlu menggubal dasar kitar semula mandatori berasaskan Extended Producer Responsibility (EPR)</li>
+                <li>Pelaksanaan dasar EPR di Kesatuan Eropah telah meningkatkan kadar kitar semula bateri kenderaan elektrik sehingga 65% (European Environment Agency, 2021)</li>
+                <li>Teknologi pemprosesan sisa bateri seperti hidrometalurgi dan pirometalurgi boleh dikembangkan di Malaysia dengan kerjasama antara industri tempatan dan pusat penyelidikan—mengurangkan pencemaran alam sekitar dan mewujukan peluang ekonomi baharu dalam sektor kitar semula</li>
+            </ul>
+        </div>
+    </main>
+</div>
+
+<script>
+    function showContent(sectionId) {
+        const sections = document.querySelectorAll('.content');
+        sections.forEach(section => section.classList.remove('active'));
+        document.getElementById(sectionId).classList.add('active');
+
+        document.getElementById('mainContent').scrollIntoView({
+            behavior: 'smooth'
+        });
+    }
+</script>
+
+</body>
+</html>
